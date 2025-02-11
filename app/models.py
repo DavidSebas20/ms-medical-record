@@ -1,13 +1,13 @@
 from pydantic import BaseModel
-from typing import Optional
 from datetime import date
+from uuid import UUID
 
 class ClinicalRecord(BaseModel):
-    record_id: str
+    record_id: UUID 
     patient_id: str
     height: float
     weight: float
     heart_rate: int
     blood_pressure: str
-    notes: Optional[str]
+    notes: str
     date: date
